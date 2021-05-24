@@ -6,7 +6,7 @@ export default function App() {
     return (
         <div>
             <header><h1>Weather Forecast</h1></header>
-            <section>
+            <section className='Content__wrapper'>
                 <WeekForecastBlock />
                 <DayForecastBlock />
             </section>
