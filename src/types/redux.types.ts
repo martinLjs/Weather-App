@@ -7,7 +7,6 @@ export interface anyAction {
 }
 
 export interface weekWeatherState {
-    city: string | null,
     weather: weatherCard[] | null,
 }
 

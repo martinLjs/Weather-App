@@ -6,22 +6,22 @@ export const setWeekWeather = (weather: any) => {
 }
 
 //thunk
-export const getWeekWeather = (lat: number, log: number) => {
-    return (dispatch: any) => {
-        getWeekWeatherApi(lat, log)
-            .then(
-                (res) => {
-                    console.log(res.daily)
-                    const weatherCardsList = res.daily.map((day: any) => ({
-                        date: new Date,
-                        temp: day.temp.day,
-                        conditionIcon: day.weather[0].icon,
-                    })
-                    )
-                    console.log(weatherCardsList)
-                    // dispatch(setWeekWeather(weatherCardsList))
-
-                }
+export function getWeekWeather(lat: number, log: number) {
+    return async (dispatch: any) => {
+        try {
+            const res = await getWeekWeatherApi(lat, log)
+            const weatherCardsList = res.daily.map((day: any) => ({
+                date: new Date().toJSON().slice(0, 10).replace(/-/g, '/'),
+                temp: day.temp.day,
+                conditionIcon: day.weather[0].icon,
+            })
             )
+            console.log(weatherCardsList)
+            dispatch(setWeekWeather(weatherCardsList))
+        } catch (error) {
+            console.log(error)
+        }
+
+
     }
 }

@@ -3,9 +3,7 @@ import { weekWeatherState, ActionTypes } from '../../types/redux.types'
 
 
 const initialState: weekWeatherState = {
-    city: null,
     weather: null,
-
 }
 
 export default (state = initialState, { type, payload }: anyAction) => {
