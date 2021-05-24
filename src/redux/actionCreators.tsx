@@ -10,11 +10,17 @@ export function getWeekWeather(lat: number, log: number) {
     return async (dispatch: any) => {
         try {
             const res = await getWeekWeatherApi(lat, log)
-            const weatherCardsList = res.daily.map((day: any) => ({
-                date: new Date().toJSON().slice(0, 10).replace(/-/g, '/'),
-                temp: day.temp.day,
-                conditionIcon: day.weather[0].icon,
-            })
+            const weatherCardsList = res.daily.map((day: any, index: number) => {
+                const forecastDate = new Date(new Date().getTime() + index * (24 * 60 * 60 * 1000))
+                    .toJSON()
+                    .slice(0, 10)
+                    .replace(/-/g, '/')
+                return ({
+                    date: forecastDate,
+                    temp: day.temp.day,
+                    conditionIcon: day.weather[0].icon,
+                })
+            }
             )
             console.log(weatherCardsList)
             dispatch(setWeekWeather(weatherCardsList))

@@ -1,7 +1,9 @@
 import React from 'react'
+import { useSelector } from 'react-redux';
 import { useAction } from '../hooks/useAction'
-import { getWeekWeather } from '../redux/actionCreators'
+import { RootState } from '../redux/store';
 import CloudIcon from './icons/CloudIcon'
+import Slider from './Slider';
 
 export default function WeekForecastBlock() {
     const { getWeekWeather } = useAction();
@@ -9,6 +11,7 @@ export default function WeekForecastBlock() {
         const [lat, log] = e.target.value.split(', ');
         getWeekWeather(lat, log);
     }
+    const weatherData = useSelector<RootState>(state => state.weekWeather.weather)
     return (
         <div>
             <h2>7 Days Forecast</h2>
@@ -20,8 +23,12 @@ export default function WeekForecastBlock() {
                 <option value="55.796127, 49.106405">Казань</option>
                 <option value="45.035470, 38.975313">Краснодар</option>
             </select>
-            <CloudIcon />
-            <div>Fill in all the fields and the weather will be displayed</div>
+            {weatherData ? <Slider weather={weatherData} /> : <>
+                <CloudIcon />
+                <div>Fill in all the fields and the weather will be displayed</div>
+            </>
+            }
+
         </div>
     )
 }

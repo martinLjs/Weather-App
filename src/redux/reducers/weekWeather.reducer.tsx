@@ -10,7 +10,7 @@ export default (state = initialState, { type, payload }: anyAction) => {
     switch (type) {
 
         case ActionTypes.SET_WEEK_WEATHER:
-            return { ...state, weather: payload.weather }
+            return { ...state, weather: payload }
 
         default:
             return state
