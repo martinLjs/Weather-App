@@ -23,10 +23,10 @@ export default function WeekForecastBlock() {
                 <option value="55.796127, 49.106405">Казань</option>
                 <option value="45.035470, 38.975313">Краснодар</option>
             </select>
-            {weatherData ? <Slider weather={weatherData} /> : <>
+            {weatherData ? <Slider weather={weatherData} /> : <div>
                 <CloudIcon />
                 <div>Fill in all the fields and the weather will be displayed</div>
-            </>
+            </div>
             }
 
         </div>

@@ -1,5 +1,6 @@
 export enum ActionTypes {
-    SET_WEEK_WEATHER = 'SET_WEEK_WEATHER'
+    SET_WEEK_WEATHER = 'SET_WEEK_WEATHER',
+    SET_DAY_WEATHER = 'SET_DAY_WEATHER',
 }
 export interface anyAction {
     type: string,
@@ -9,9 +10,17 @@ export interface anyAction {
 export interface weekWeatherState {
     weather: weatherCard[] | null,
 }
-
+export interface dayForecastState {
+    forecast: weatherCard | null,
+}
 export interface weatherCard {
     date: Date,
     temp: number,
     conditionIcon: string,
-} 
+}
+export type stringState = string | null;
+export type numberState = number | null;
+
+
+
+
