@@ -11,7 +11,7 @@ export default function WeekForecastBlock() {
         const [lat, log] = e.target.value.split(', ');
         getWeekWeather(lat, log);
     }
-    const weatherData = useSelector<RootState>(state => state.weekWeather.weather)
+    const weatherData = useSelector<RootState>(state => state.weekWeather.forecast)
     return (
         <div>
             <h2>7 Days Forecast</h2>

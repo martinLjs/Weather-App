@@ -13,7 +13,7 @@ export function getWeekWeather(lat: number, log: number) {
     return async (dispatch: any) => {
         try {
             const res = await requestWeekForecast(lat, log);
-            const weatherCardsList = res.daily.map((item: any) => {
+            const weatherCardsList: weatherCard = res.daily.map((item: any) => {
                 const forecastDate = new Date(item.dt * 1000)
                     .toLocaleDateString();
                 return ({
@@ -21,9 +21,7 @@ export function getWeekWeather(lat: number, log: number) {
                     temp: item.temp.day.toFixed(1),
                     conditionIcon: item.weather[0].icon,
                 })
-            }
-            )
-            console.log(weatherCardsList)
+            })
             dispatch(setWeekWeather(weatherCardsList))
         } catch (error) {
             console.log(error)
@@ -36,12 +34,12 @@ export function getDayForecast(lat: number, log: number, date: number) {
     return async (dispatch: any) => {
         try {
             const res = await requestDayForecast(lat, log, date);
-            console.log(res)
-            const forecastCard = {
+            const forecastData = {
+                date: new Date(res.current.dt * 1000).toLocaleDateString(),
                 temp: res.current.temp,
-                weatherIcon: res.current.weather[0].icon
+                conditionIcon: res.current.weather[0].icon
             }
-            dispatch(setDayWeather(forecastCard));
+            dispatch(setDayWeather(forecastData));
         } catch (error) {
             console.log(error)
         }

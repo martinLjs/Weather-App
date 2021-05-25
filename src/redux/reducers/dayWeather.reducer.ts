@@ -9,7 +9,7 @@ export default (state = initialState, { type, payload }: anyAction) => {
     switch (type) {
 
         case ActionTypes.SET_DAY_WEATHER:
-            return { ...state, ...payload }
+            return { ...state, forecast: payload }
 
         default:
             return state

@@ -7,10 +7,12 @@ import CloudIcon from './icons/CloudIcon'
 import WeatherCard from './WeatherCard';
 
 export default function DayForecastBlock() {
+
     const { getDayForecast } = useAction();
     const forecastData = useSelector<RootState>(state => state.dayWeather.forecast)
     const [date, setDate] = useState<numberState>(null);
     const [city, setCity] = useState<stringState>(null);
+
     const handleDate = (e: React.ChangeEvent<HTMLInputElement>) => {
         const time = +new Date(e.target.value) / 1000;
         setDate(time)
@@ -18,12 +20,18 @@ export default function DayForecastBlock() {
     const handleCity = (e: React.ChangeEvent<HTMLSelectElement>) => {
         setCity(e.target.value)
     }
+
     useEffect(() => {
         if (city && date) {
             const [lat, lon] = city.split(', ');
             getDayForecast(+lat, +lon, date);
         }
     }, [city, date])
+    useEffect(() => {
+
+        console.log(forecastData)
+    }, [forecastData])
+
     return (
         <div>
             <h2>Forecast for a Date in the Past</h2>
@@ -36,10 +44,10 @@ export default function DayForecastBlock() {
                 <option value="45.035470, 38.975313">Краснодар</option>
             </select>
             <input onChange={(e) => handleDate(e)} type="date" />
-            {forecastData ? <WeatherCard data={forecastData} /> : <>
+            {forecastData ? <WeatherCard data={forecastData} /> : <div>
                 <CloudIcon />
                 <div>Fill in all the fields and the weather will be displayed</div>
-            </>
+            </div>
             }
         </div>
     )

@@ -3,14 +3,14 @@ import { weekWeatherState, ActionTypes } from '../../types/redux.types'
 
 
 const initialState: weekWeatherState = {
-    weather: null,
+    forecast: null,
 }
 
 export default (state = initialState, { type, payload }: anyAction) => {
     switch (type) {
 
         case ActionTypes.SET_WEEK_WEATHER:
-            return { ...state, weather: payload }
+            return { ...state, forecast: payload }
 
         default:
             return state
