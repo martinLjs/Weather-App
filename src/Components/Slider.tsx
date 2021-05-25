@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { weatherCard } from '../types/redux.types';
 import WeatherCard from './WeatherCard';
-
+import '../styles/index.css'
+import ArrowLeft from './icons/arrowLeft';
 export default function Slider(props: any) {
     const weatherData = props.weather;
     const cards = weatherData && weatherData.map((item: weatherCard) =>
@@ -24,19 +25,23 @@ export default function Slider(props: any) {
         setIndex(0);
     }, [weatherData])
     return (
-        <div>
-
+        <div className='Slider'>
             <div onClick={() => handleLeftArrow()}>left</div>
-            {
-                cards[index]
-            }
-            {
-                cards[index + 1]
-            }
-            {
-                cards[index + 2]
-            }
-            <div onClick={() => handleRightArrow()}> right</div>
+            <div className='Slider__container'>
+                {
+                    cards[index]
+                }
+                {
+                    cards[index + 1]
+                }
+                {
+                    cards[index + 2]
+                }
+            </div>
+            <div onClick={() => handleRightArrow()}>
+                <ArrowLeft />
+                {/* <img src={require('../assets/icons/24/chevron-left.png')} alt="" /> */}
+            </div>
         </div>
     )
 }

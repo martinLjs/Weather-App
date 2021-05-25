@@ -5,6 +5,8 @@ import { RootState } from '../redux/store';
 import { numberState, stringState } from '../types/redux.types';
 import CloudIcon from './icons/CloudIcon'
 import WeatherCard from './WeatherCard';
+import '../styles/index.css'
+import Warning from './Warning';
 
 export default function DayForecastBlock() {
 
@@ -33,8 +35,8 @@ export default function DayForecastBlock() {
     }, [forecastData])
 
     return (
-        <div>
-            <h2>Forecast for a Date in the Past</h2>
+        <div className='dayForecast'>
+            <h2 className='dayForecast__title'>Forecast for a Date in the Past</h2>
             <select onChange={(e) => handleCity(e)} name="" id="">
                 <option disabled>Выберите город</option>
                 <option value="53.195873, 50.100193">Самара</option>
@@ -44,10 +46,7 @@ export default function DayForecastBlock() {
                 <option value="45.035470, 38.975313">Краснодар</option>
             </select>
             <input onChange={(e) => handleDate(e)} type="date" />
-            {forecastData ? <WeatherCard data={forecastData} /> : <div>
-                <CloudIcon />
-                <div>Fill in all the fields and the weather will be displayed</div>
-            </div>
+            {forecastData ? <WeatherCard data={forecastData} /> : <Warning />
             }
         </div>
     )
