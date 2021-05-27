@@ -8,8 +8,9 @@ export default function WeatherCard(props: any) {
     return (
         <div className='WeatherCard'>
             <div className='WeatherCard__date'>{weather.date}</div>
-            <img src={iconUrl(weather.conditionIcon)} alt="" />
-            <div className='WeatherCard__temp'>{weather.temp + ' C°'}</div>
+            <div className='WeatherCard__icon'><img src={iconUrl(weather.conditionIcon)} alt="" />
+            </div>
+            <div className='WeatherCard__temp'>{weather.temp + '°'}</div>
         </div>
     )
 }

@@ -36,7 +36,7 @@ export function getDayForecast(lat: number, log: number, date: number) {
             const res = await requestDayForecast(lat, log, date);
             const forecastData = {
                 date: new Date(res.current.dt * 1000).toLocaleDateString(),
-                temp: res.current.temp,
+                temp: res.current.temp.toFixed(1),
                 conditionIcon: res.current.weather[0].icon
             }
             dispatch(setDayWeather(forecastData));
