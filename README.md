@@ -11,7 +11,7 @@ Or you can open project on:
 
 [Github Pages](https://martinljs.github.io/Weather-App/)
 
-Environment:
+### Environment:
 
 React
 Typescript
@@ -19,14 +19,14 @@ Redux(thunk, devtools, react-redux)
 
 
 
-What is completed:
+### What is completed:
 - all business logic required
 - usage of ts and redux
 - half of typisation
 - styles for desktop 
 - github pages
 
-What I did not have time to complete:
+### What I did not have time to complete:
 - styles for mobile version
 - additional refactoring and typisation
 - touches and swipes support
