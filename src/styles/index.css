@@ -183,7 +183,6 @@ body {
 
 .App__wrapper{
     margin: 0 auto;
-    /* width: 1800px; */
     background-color: #373AF5;
     color: white;
     position: relative;
@@ -233,6 +232,7 @@ body {
 }
 
 .weekForecast__title, .dayForecast__title {
+    font-weight: 700;
     font-size: 32px;
     color: #2C2D76
 }

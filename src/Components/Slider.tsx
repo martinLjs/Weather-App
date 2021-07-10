@@ -29,15 +29,9 @@ export default function Slider(props: any) {
         <div className='Slider'>
             <div onClick={() => handleLeftArrow()}><ArrowRight /></div>
             <div className='Slider__container'>
-                {
-                    cards[index]
-                }
-                {
-                    cards[index + 1]
-                }
-                {
-                    cards[index + 2]
-                }
+                <div>{cards[index]}</div>
+                <div>{cards[index + 1]}</div>
+                <div>{cards[index + 2]}</div>
             </div>
             <div onClick={() => handleRightArrow()}>
                 <ArrowLeft />

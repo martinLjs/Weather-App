@@ -8,6 +8,7 @@ export const setDayWeather = (weather: any) => {
     return ({ type: ActionTypes.SET_DAY_WEATHER, payload: weather })
 }
 
+
 //thunk
 export function getWeekWeather(lat: number, log: number) {
     return async (dispatch: any) => {
