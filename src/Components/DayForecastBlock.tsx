@@ -1,40 +1,34 @@
 import React, { useEffect, useState } from 'react'
-import { useSelector } from 'react-redux';
+import { useSelector } from 'react-redux'
 import { useAction } from '../hooks/useAction'
-import { RootState } from '../redux/store';
-import { numberState, stringState } from '../types/redux.types';
-import CloudIcon from './icons/CloudIcon'
-import WeatherCard from './WeatherCard';
+import { RootState } from '../redux/store'
+import { numberState, stringState } from '../types/redux.types'
+import WeatherCard from './WeatherCard'
 import '../styles/index.css'
-import Warning from './Warning';
+import Warning from './Warning'
 
-export default function DayForecastBlock() {
+export default function DayForecastBlock () {
+  const { getDayForecast } = useAction()
+  const forecastData = useSelector<RootState>(state => state.dayWeather.forecast)
+  const [date, setDate] = useState<numberState>(null)
+  const [city, setCity] = useState<stringState>(null)
 
-    const { getDayForecast } = useAction();
-    const forecastData = useSelector<RootState>(state => state.dayWeather.forecast)
-    const [date, setDate] = useState<numberState>(null);
-    const [city, setCity] = useState<stringState>(null);
+  const handleDate = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const time = +new Date(e.target.value) / 1000
+    setDate(time)
+  }
+  const handleCity = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    setCity(e.target.value)
+  }
 
-    const handleDate = (e: React.ChangeEvent<HTMLInputElement>) => {
-        const time = +new Date(e.target.value) / 1000;
-        setDate(time)
+  useEffect(() => {
+    if (city && date) {
+      const [lat, lon] = city.split(', ')
+      getDayForecast(+lat, +lon, date)
     }
-    const handleCity = (e: React.ChangeEvent<HTMLSelectElement>) => {
-        setCity(e.target.value)
-    }
+  }, [city, date])
 
-    useEffect(() => {
-        if (city && date) {
-            const [lat, lon] = city.split(', ');
-            getDayForecast(+lat, +lon, date);
-        }
-    }, [city, date])
-    useEffect(() => {
-
-        console.log(forecastData)
-    }, [forecastData])
-
-    return (
+  return (
         <div className='dayForecast'>
             <h2 className='dayForecast__title'>Forecast for a Date in the Past</h2>
             <div className='dayForecast__form'>
@@ -52,5 +46,5 @@ export default function DayForecastBlock() {
                 {forecastData ? <WeatherCard data={forecastData} /> : <Warning />}
             </div>
         </div>
-    )
+  )
 }

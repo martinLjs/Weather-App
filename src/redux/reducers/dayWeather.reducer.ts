@@ -1,18 +1,17 @@
-import { anyAction, dayForecastState } from './../../types/redux.types';
+import { anyAction, dayForecastState } from './../../types/redux.types'
 import { ActionTypes } from '../../types/redux.types'
 
 const initialState: dayForecastState = {
-    forecast: null,
+  forecast: null
 }
 
 export default (state = initialState, { type, payload }: anyAction) => {
-    switch (type) {
+  switch (type) {
+    case ActionTypes.SET_DAY_WEATHER:
+      return { ...state, forecast: payload }
 
-        case ActionTypes.SET_DAY_WEATHER:
-            return { ...state, forecast: payload }
-
-        default:
-            return state
-    }
+    default:
+      return state
+  }
 }
 export { }

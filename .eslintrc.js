@@ -20,5 +20,8 @@ module.exports = {
     '@typescript-eslint'
   ],
   rules: {
+    "no-use-before-define": "off",
+    "no-unused-vars": 1,
+    "@typescript-eslint/no-use-before-define": ["error"]
   }
 }

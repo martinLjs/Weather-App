@@ -1,19 +1,19 @@
 import React from 'react'
-import { useSelector } from 'react-redux';
+import { useSelector } from 'react-redux'
 import { useAction } from '../hooks/useAction'
-import { RootState } from '../redux/store';
-import Slider from './Slider';
+import { RootState } from '../redux/store'
+import Slider from './Slider'
 import '../styles/index.css'
-import Warning from './Warning';
+import Warning from './Warning'
 
-export default function WeekForecastBlock() {
-    const { getWeekWeather } = useAction();
-    const handleCity = (e: any) => {
-        const [lat, log] = e.target.value.split(', ');
-        getWeekWeather(lat, log);
-    }
-    const weatherData = useSelector<RootState>(state => state.weekWeather.forecast)
-    return (
+export default function WeekForecastBlock () {
+  const { getWeekWeather } = useAction()
+  const handleCity = (e: any) => {
+    const [lat, log] = e.target.value.split(', ')
+    getWeekWeather(lat, log)
+  }
+  const weatherData = useSelector<RootState>(state => state.weekWeather.forecast)
+  return (
         <div className='weekForecast'>
             <h2 className='weekForecast__title'>7 Days Forecast</h2>
             <select className='citySelect' onChange={(e) => handleCity(e)} name="" id="">
@@ -28,5 +28,5 @@ export default function WeekForecastBlock() {
             }
 
         </div>
-    )
+  )
 }

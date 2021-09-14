@@ -20,7 +20,3 @@ export interface weatherCard {
 }
 export type stringState = string | null;
 export type numberState = number | null;
-
-
-
-

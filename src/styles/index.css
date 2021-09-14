@@ -1,319 +1,414 @@
 html {
-    line-height: 1.15;
-    -webkit-text-size-adjust: 100%;
-  }
-  body {
-    margin: 0;
-  }
-  main {
-    display: block;
-  }
-  h1 {
-    font-size: 2em;
-    margin: 0.67em 0;
-  }
-  hr {
-    box-sizing: content-box;
-    height: 0;
-    overflow: visible;
-  }
-  pre {
-    font-family: monospace, monospace;
-    font-size: 1em;
-  }
-  a {
-    background-color: transparent;
-  }
-  abbr[title] {
-    border-bottom: none;
-    text-decoration: underline;
-    text-decoration: underline dotted;
-  }
-  b,strong {
-    font-weight: bolder;
-  }
-  code,kbd,samp {
-    font-family: monospace, monospace;
-    font-size: 1em;
-  }
-  small {
-    font-size: 80%;
-  }
-  sub,sup {
-    font-size: 75%;
-    line-height: 0;
-    position: relative;
-    vertical-align: baseline;
-  }
-  sub {
-    bottom: -0.25em;
-  }
-  sup {
-    top: -0.5em;
-  }
-  img {
-    border-style: none;
-  }
-  button,input,optgroup,select,textarea {
-    font-family: inherit;
-    font-size: 100%;
-    line-height: 1.15;
-    margin: 0;
-  }
-  button,input {
-    overflow: visible;
-  }
-  button,select {
-    text-transform: none;
-  }
-  button,[type="button"],[type="reset"],[type="submit"] {
-    -webkit-appearance: button;
-  }
-  button::-moz-focus-inner,
-  [type="button"]::-moz-focus-inner,
-  [type="reset"]::-moz-focus-inner,
-  [type="submit"]::-moz-focus-inner {
-    border-style: none;
-    padding: 0;
-  }
-  button:-moz-focusring,
-  [type="button"]:-moz-focusring,
-  [type="reset"]:-moz-focusring,
-  [type="submit"]:-moz-focusring {
-    outline: 1px dotted ButtonText;
-  }
-  fieldset {
-    padding: 0.35em 0.75em 0.625em;
-  }
-  legend {
-    box-sizing: border-box;
-    color: inherit;
-    display: table;
-    max-width: 100%;
-    padding: 0;
-    white-space: normal;
-  }
-  progress {
-    vertical-align: baseline;
-  }
-  textarea {
-    overflow: auto;
-  }
-  [type="checkbox"],[type="radio"] {
-    box-sizing: border-box;
-    padding: 0;
-  }
-  [type="number"]::-webkit-inner-spin-button,[type="number"]::-webkit-outer-spin-button {
-    height: auto;
-  }
-  [type="search"] {
-    -webkit-appearance: textfield;
-    outline-offset: -2px;
-  }
-  [type="search"]::-webkit-search-decoration {
-    -webkit-appearance: none;
-  }
-  ::-webkit-file-upload-button {
-    -webkit-appearance: button;
-    font: inherit;
-  }
-  details {
-    display: block;
-  }
-  summary {
-    display: list-item;
-  }
-  template {
-    display: none;
-  }
-  [hidden] {
-    display: none;
-  }
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
 }
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+body {
+  margin: 0;
+}
+main {
+  display: block;
+}
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+pre {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+a {
+  background-color: transparent;
+}
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+  text-decoration: underline dotted;
+}
+b,
+strong {
+  font-weight: bolder;
+}
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+small {
+  font-size: 80%;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sub {
+  bottom: -0.25em;
+}
+sup {
+  top: -0.5em;
+}
+img {
+  border-style: none;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+button,
+input {
+  overflow: visible;
+}
+button,
+select {
+  text-transform: none;
+}
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+legend {
+  box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal;
+}
+progress {
+  vertical-align: baseline;
+}
+textarea {
+  overflow: auto;
+}
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+[type="search"] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+details {
+  display: block;
+}
+summary {
+  display: list-item;
+}
+template {
+  display: none;
+}
+[hidden] {
+  display: none;
+}
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 html {
   height: 100%;
 }
 body {
-	line-height: 1;
+  line-height: 1;
 }
-ol, ul {
-	list-style: none;
+ol,
+ul {
+  list-style: none;
 }
-blockquote, q {
-	quotes: none;
+blockquote,
+q {
+  quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap");
 body {
-    font-family: 'Ubuntu', sans-serif;
-  }
-
-
-.App__wrapper{
-    margin: 0 auto;
-    background-color: #373AF5;
-    color: white;
-    position: relative;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: space-between;
-    align-items: center;
-    background-image:  url("../assets/Background/bottom.png"), url("../assets/Background/up.png");  
-    background-position: left bottom , right top ;
-    background-size: 500px 700px;
-    background-repeat: no-repeat, no-repeat;
-}
-.Content__wrapper{
-    display: flex;
-    flex-wrap: wrap;
-    align-content: space-between;
-    align-items: flex-start;
-}
-.App__title{
-    display: flex;
-    flex-direction: column;
-
-    width: 100%;
-    font-weight: 700;
-    font-size: 100px;
-}
-.App__title-sub{
-    padding-left: 350px;
-}
-.App__footer{
-    font-size: 14px;
-    line-height: 18px;
-    opacity: 0.6;
-    text-transform: uppercase;
-    padding-bottom: 16px;
-}
-.weekForecast, .dayForecast {
-    flex: 1;
-    height: 524px;
-    padding: 50px;
-    margin: 17px;
-    background-color: #fff;
-    box-shadow: 0px 4px 4px rgba(4, 5, 73, 0.25), 14px 14px 20px rgba(5, 6, 114, 0.2);
-    border-radius: 8px; 
+  font-family: "Ubuntu", sans-serif;
 }
 
-.weekForecast__title, .dayForecast__title {
-    font-weight: 700;
-    font-size: 32px;
-    color: #2C2D76
+.App {
+  margin: 0 auto;
+  background-color: #373af5;
+  color: white;
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: space-between;
+  align-items: center;
+  background-image: url("../assets/Background/bottom.png"), url("../assets/Background/up.png");
+  background-position: left bottom, right top;
+  background-size: 500px 700px;
+  background-repeat: no-repeat, no-repeat;
+}
+.Content__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+  align-items: flex-start;
+}
+.App__title {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  font-weight: 700;
+  font-size: 100px;
+}
+.App__subtitle {
+  padding-left: 350px;
+}
+.App__footer {
+  font-size: 14px;
+  line-height: 18px;
+  opacity: 0.6;
+  text-transform: uppercase;
+  padding-bottom: 16px;
+}
+.weekForecast,
+.dayForecast {
+  flex: 1;
+  height: 524px;
+  padding: 50px;
+  margin: 17px;
+  background-color: #fff;
+  box-shadow: 0px 4px 4px rgba(4, 5, 73, 0.25), 14px 14px 20px rgba(5, 6, 114, 0.2);
+  border-radius: 8px;
 }
 
-.dayForecast__card{
-    padding-top: 50px;
-}
-.dayForecast__form{
-    display: flex;
-    align-items: center;
-}
-.Warning{
-    padding-top: 50px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: space-between;
-    align-items: center;
-    color: #8083A4;
-    font-weight: bold;
-    font-size: 16px;
-}
-.Warning__title{
-    padding-top: 30px;
+.weekForecast__title,
+.dayForecast__title {
+  font-weight: 700;
+  font-size: 32px;
+  color: #2c2d76;
 }
 
-.WeatherCard{
-    height: 240px;
-    position: relative;
-    padding: 20px;
-    margin: 5px;
-    background-color: #373AF5;
-    
-    flex-basis: 100%;
-    box-sizing: border-box;
-    box-shadow: 0px 4px 4px rgba(4, 5, 73, 0.25), 14px 14px 20px rgba(5, 6, 114, 0.2);
-    border-radius: 8px;
+.dayForecast__card {
+  padding-top: 50px;
 }
-.WeatherCard__date{
-    font-weight: bold;
-    font-size: 16px;
+.dayForecast__form {
+  display: flex;
+  align-items: center;
 }
-.WeatherCard__temp{
-    font-weight: bold;
-    font-size: 32px;
-    line-height: 32px;
-    position: absolute;
-    bottom: 15px;
-    right: 15px;
+.Warning {
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: space-between;
+  align-items: center;
+  color: #8083a4;
+  font-weight: bold;
+  font-size: 16px;
 }
-.WeatherCard__icon{
-    text-align: center;
-    margin: 0 auto;
-    padding: 30px;
+.Warning__title {
+  padding-top: 30px;
 }
 
-.Slider{
-    padding-top: 50px;
-    display: flex;
-    align-items: center;
-    width: 100%;
+.WeatherCard {
+  height: 240px;
+  position: relative;
+  padding: 20px;
+  margin: 5px;
+  background-color: #373af5;
+
+  flex-basis: 100%;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgba(4, 5, 73, 0.25), 14px 14px 20px rgba(5, 6, 114, 0.2);
+  border-radius: 8px;
 }
-.Slider__container{
-    display: flex;
+.WeatherCard__date {
+  font-weight: bold;
+  font-size: 16px;
+}
+.WeatherCard__temp {
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 32px;
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+}
+.WeatherCard__icon {
+  text-align: center;
+  margin: 0 auto;
+  padding: 30px;
 }
 
-
-.citySelect{
-    margin: 10px;
-    color: #2C2D76;
-    padding: 12px 16px;
-    border: 2px solid rgba(128, 131, 164, 0.2);
-    box-sizing: border-box;
-    border-radius: 8px;
+.Slider {
+  padding-top: 50px;
+  display: flex;
+  align-items: center;
+  width: 100%;
 }
-.datePicker{
-    margin: 10px;
-    color: #2C2D76;
-    padding: 9px 16px;
-    border: 2px solid rgba(128, 131, 164, 0.2);
-    box-sizing: border-box;
-    border-radius: 8px;
+.Slider__container {
+  display: flex;
 }
 
+.citySelect {
+  margin: 10px;
+  color: #2c2d76;
+  padding: 12px 16px;
+  border: 2px solid rgba(128, 131, 164, 0.2);
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+.datePicker {
+  margin: 10px;
+  color: #2c2d76;
+  padding: 9px 16px;
+  border: 2px solid rgba(128, 131, 164, 0.2);
+  box-sizing: border-box;
+  border-radius: 8px;
+}
