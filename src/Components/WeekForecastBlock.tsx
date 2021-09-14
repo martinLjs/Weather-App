@@ -14,9 +14,9 @@ export default function WeekForecastBlock () {
   }
   const weatherData = useSelector<RootState>(state => state.weekWeather.forecast)
   return (
-        <div className='weekForecast'>
-            <h2 className='weekForecast__title'>7 Days Forecast</h2>
-            <select className='citySelect' onChange={(e) => handleCity(e)} name="" id="">
+        <div className='WeekForecast'>
+            <h2 className='WeekForecast__title'>7 Days Forecast</h2>
+            <select className='CitySelect' onChange={(e) => handleCity(e)} name="" id="">
                 <option disabled>Выберите город</option>
                 <option value="53.195873, 50.100193">Самара</option>
                 <option value="53.507836, 49.420393">Тольятти</option>

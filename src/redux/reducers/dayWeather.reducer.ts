@@ -1,7 +1,7 @@
-import { anyAction, dayForecastState } from './../../types/redux.types'
+import { anyAction, DayForecastState } from './../../types/redux.types'
 import { ActionTypes } from '../../types/redux.types'
 
-const initialState: dayForecastState = {
+const initialState: DayForecastState = {
   forecast: null
 }
 

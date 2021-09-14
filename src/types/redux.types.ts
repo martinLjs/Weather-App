@@ -10,7 +10,7 @@ export interface anyAction {
 export interface weekWeatherState {
     forecast: weatherCard[] | null,
 }
-export interface dayForecastState {
+export interface DayForecastState {
     forecast: weatherCard | null,
 }
 export interface weatherCard {

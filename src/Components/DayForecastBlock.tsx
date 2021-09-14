@@ -29,10 +29,10 @@ export default function DayForecastBlock () {
   }, [city, date])
 
   return (
-        <div className='dayForecast'>
-            <h2 className='dayForecast__title'>Forecast for a Date in the Past</h2>
-            <div className='dayForecast__form'>
-                <select className='citySelect' onChange={(e) => handleCity(e)} name="" id="">
+        <div className='DayForecast'>
+            <h2 className='DayForecast__title'>Forecast for a Date in the Past</h2>
+            <div className='DayForecast__form'>
+                <select className='CitySelect' onChange={(e) => handleCity(e)} name="" id="">
                     <option disabled>Выберите город</option>
                     <option value="53.195873, 50.100193">Самара</option>
                     <option value="53.507836, 49.420393">Тольятти</option>
@@ -40,9 +40,9 @@ export default function DayForecastBlock () {
                     <option value="55.796127, 49.106405">Казань</option>
                     <option value="45.035470, 38.975313">Краснодар</option>
                 </select>
-                <input className='datePicker' onChange={(e) => handleDate(e)} type="date" />
+                <input className='DatePicker' onChange={(e) => handleDate(e)} type="date" />
             </div>
-            <div className='dayForecast__card'>
+            <div className='DayForecast__card'>
                 {forecastData ? <WeatherCard data={forecastData} /> : <Warning />}
             </div>
         </div>

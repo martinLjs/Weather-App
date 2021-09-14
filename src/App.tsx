@@ -5,17 +5,17 @@ import './styles/index.css'
 export default function App () {
   return (
         <div className='App'>
-            <header>
-                <h1 className='App__title'>
+            <header className='Header'>
+                <h1 className='Header__title'>
                     <span>Weather</span>
-                    <span className='App__subtitle'>forecast</span>
+                    <span className='Header__subtitle'>forecast</span>
                 </h1>
             </header>
-            <section className='Content__wrapper'>
+            <section className='Content'>
                 <WeekForecastBlock />
                 <DayForecastBlock />
             </section>
-            <footer className='App__footer'> from Martin to Mercury with love </footer>
+            <footer className='Footer'> from Martin to Mercury with love </footer>
         </div>
   )
 }
