@@ -12,12 +12,13 @@ export default function Slider (props: any) {
   const [index, setIndex] = useState(0)
 
   const handleLeftArrow = (): void => {
-    if (index > 0) {
+    if (index > 1) {
       setIndex(index - 1)
     }
   }
   const handleRightArrow = (): void => {
-    if (index < 4) {
+    const maxIndex = document.documentElement.clientWidth <= 715 ? 6 : 4
+    if (index < maxIndex) {
       setIndex(index + 1)
     }
   }
@@ -27,11 +28,13 @@ export default function Slider (props: any) {
   }, [weatherData])
   return (
         <div className='Slider'>
-            <div onClick={() => handleLeftArrow()}><ArrowRight /></div>
+            <div onClick={() => handleLeftArrow()}>
+              <ArrowRight />
+            </div>
             <div className='Slider__container'>
                 <div>{cards[index]}</div>
-                <div>{cards[index + 1]}</div>
-                <div>{cards[index + 2]}</div>
+                <div className='Slider__item_hidden'>{cards[index + 1]}</div>
+                <div className='Slider__item_hidden'>{cards[index + 2]}</div>
             </div>
             <div onClick={() => handleRightArrow()}>
                 <ArrowLeft />
