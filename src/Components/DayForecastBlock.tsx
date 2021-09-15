@@ -42,7 +42,7 @@ export default function DayForecastBlock () {
                 </select>
                 <input className='DatePicker' onChange={(e) => handleDate(e)} type="date" />
             </div>
-                {forecastData ? <WeatherCard data={forecastData} /> : <Warning />}
+                {forecastData ? <div className="DayForecast__content"><WeatherCard data={forecastData} /> </div> : <Warning />}
         </div>
   )
 }

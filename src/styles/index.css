@@ -348,7 +348,7 @@ body {
 .DayForecast {
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
+  
   flex: 1;
   height: 524px;
   padding: 50px;
@@ -357,7 +357,12 @@ body {
   box-shadow: 0px 4px 4px rgba(4, 5, 73, 0.25), 14px 14px 20px rgba(5, 6, 114, 0.2);
   border-radius: 8px;
 }
-
+@media (max-width: 715px){
+  .WeekForecast,
+  .DayForecast {
+    align-items: center;
+  }
+}
 .WeekForecast__title,
 .DayForecast__title {
   padding-bottom: 15px;
@@ -380,6 +385,9 @@ body {
   display: flex;
   align-items: center;
 }
+.DayForecast__content{
+  padding-top: 50px;
+}
 .Warning {
   padding-top: 50px;
   display: flex;
@@ -397,12 +405,11 @@ body {
 
 .WeatherCard {
   height: 240px;
+  max-width: 400px;
   position: relative;
   padding: 20px;
   margin: 5px;
   background-color: #373af5;
-
-  flex-basis: 100%;
   box-sizing: border-box;
   box-shadow: 0px 4px 4px rgba(4, 5, 73, 0.25), 14px 14px 20px rgba(5, 6, 114, 0.2);
   border-radius: 8px;
@@ -429,7 +436,6 @@ body {
   padding-top: 50px;
   display: flex;
   align-items: center;
-  width: 100%;
 }
 .Slider__container {
   display: flex;
