@@ -19,15 +19,15 @@ Redux(thunk, devtools, react-redux)
 
 
 
-### What is completed:
-- all business logic required
-- usage of ts and redux
-- half of typisation
-- styles for desktop 
-- github pages
+### How to use:
 
-### What I did not have time to complete:
-- styles for mobile version
-- additional refactoring and typisation
-- touches and swipes support
-- add esLint(i did it, but incorrectly)
+## For getting the week weather
+1) choose the city
+2) use arrows to see all the forecast
+
+## For getting the day weather in the past
+1) choose the city
+2) choose the day in the past (last 5 days)
+
+
+
